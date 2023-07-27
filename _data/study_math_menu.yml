@@ -1,0 +1,19 @@
+- label: Math
+  link: /study/
+  items:
+    - name: Installation
+      link: /study/math/ins
+    - name: Configuration
+      link: /study/2/
+    - name: Theming
+      link: /study/3/
+    - name: Sidebar
+      link: /study/4/
+    - name: Scripts
+      link: /study/5/
+    - label: Getting Started
+      subsubfolderitems:
+        - name: Sidebar
+          link: /study/5/1/
+        - name: Sidebar
+          link: /study/5/2/

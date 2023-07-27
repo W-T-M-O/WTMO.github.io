@@ -1,0 +1,29 @@
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'],['```$','$```'], ['\\(','\\)']],
+      processEscapes: true
+    }
+  });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+<script>
+  document.addEventListener("contextmenu", function(event){
+  event.preventDefault();
+  // alert('불펌 금지!');
+}, false);
+</script>
+
+<script language="javascript">
+
+  function Disable_Control_C() {
+  var keystroke = String.fromCharCode(event.keyCode).toLowerCase();
+  
+  if (event.ctrlKey && (keystroke == 'c' || keystroke == 'v')) {
+  alert("let's see");
+  event.returnValue = false; // disable Ctrl+C
+  }
+  }
+  
+</script>
