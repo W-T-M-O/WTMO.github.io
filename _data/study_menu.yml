@@ -1,9 +1,9 @@
 - label: Math
-  link: /study/math/
-- label: Getting Started1
-  link: /study/
-- label: Getting Started2
-  link: /study/
+  link: /study/math/집합
+- label: Statistic
+  link: /study/statistic/
+- label: Python
+  link: /study/python/
 
 # - label: Getting Started
 #   link: /study/
