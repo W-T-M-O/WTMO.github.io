@@ -1,0 +1,32 @@
+- label: Python
+  link: /study/
+  items:
+    - name: 1.왜 파이썬인가?
+      link: /study/python/1_왜 파이썬인가
+    - name: 2.변수와 자료형
+      link: /study/python/2_변수와 자료형
+    - name: 3.입출력과 제어문
+      link: /study/python/3_입출력과 제어문
+    - name: 4.함수
+      link: /study/python/4_함수
+    - name: 5.클래스
+      link: /study/python/5_클래스
+    - name: 6.예외와 에러처리
+      link: /study/python/6_예외와 에러처리
+    - name: 7.파이썬 설치 및 가상환경 설정
+      link: /study/python/7_파이썬 설치 및 가상환경 설정
+    - name: 8.할당과 복사
+      link: /study/python/8_할당과 복사
+    - name: 9.라이브러리 이해
+      link: /study/python/9_라이브러리 이해
+    - name: 10.동시성과 병렬성
+      link: /study/python/10_동시성과 병렬성
+    - name: 11.웹크롤링
+      link: /study/python/11_웹크롤링
+    # - label: Getting Started
+    #   subsubfolderitems:
+    #     - name: Sidebar
+    #       link: /study/5/1/
+    #     - name: Sidebar
+    #       link: /study/5/2/
+    # <span style="color:red">1.컴퓨터 언어란?</span>

@@ -1,0 +1,26 @@
+- label: ProgrammingLanguage
+  link: /study/
+  items:
+    - name: 1.프로그래밍 언어란?
+      link: /study/programmingLanguage/1_프로그래밍 언어란
+    - name: 2.객체 지향과 절차 지향
+      link: /study/programmingLanguage/2_객체 지향과 절차 지향
+    # - name: 3.
+    #   link: /study/programmingLanguage/3_
+    # - name: 4.
+    #   link: /study/programmingLanguage/4_
+    # - name: 5.
+    #   link: /study/programmingLanguage/5_
+    # - name: 6.
+    #   link: /study/programmingLanguage/6_
+    # - name: 7.
+    #   link: /study/programmingLanguage/7_
+    # - name: 8.
+    #   link: /study/programmingLanguage/8_
+    # - label: Getting Started
+    #   subsubfolderitems:
+    #     - name: Sidebar
+    #       link: /study/5/1/
+    #     - name: Sidebar
+    #       link: /study/5/2/
+    # <span style="color:red">1.컴퓨터 언어란?</span>

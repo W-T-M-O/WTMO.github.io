@@ -1,5 +1,7 @@
 - name: study
   link: /study/
+- name: project
+  link: /project/
 # - name: Blog
 #   link: /blog/
 #   dropdown: 

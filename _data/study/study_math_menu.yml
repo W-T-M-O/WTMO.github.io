@@ -1,0 +1,25 @@
+- label: Math
+  link: /study/
+  items:
+    - name: 1.집합
+      link: /study/math/1_집합
+    - name: 2.명제
+      link: /study/math/2_명제
+    - name: 3.함수
+      link: /study/math/3_함수
+    - name: 4.이항정리
+      link: /study/math/4_이항정리
+    - name: 5.지수함수와 로그함수
+      link: /study/math/5_지수함수와 로그함수
+    - name: 6.수열과 극한
+      link: /study/math/6_수열과 극한
+    - name: 7.선형성과 선형대수
+      link: /study/math/7_선형성과 선형대수
+    - name: 8.행렬
+      link: /study/math/8_행렬
+    # - label: Getting Started
+    #   subsubfolderitems:
+    #     - name: Sidebar
+    #       link: /study/5/1/
+    #     - name: Sidebar
+    #       link: /study/5/2/

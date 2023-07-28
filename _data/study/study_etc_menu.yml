@@ -1,0 +1,25 @@
+- label: Etc
+  link: /study/
+  items:
+    - name: 1.githubBlog
+      link: /study/etc/1_githubBlog
+    # - name: 2.
+    #   link: /study/etc/2_
+    # - name: 3.
+    #   link: /study/etc/3_
+    # - name: 4.
+    #   link: /study/etc/4_
+    # - name: 5.
+    #   link: /study/etc/5_
+    # - name: 6.
+    #   link: /study/etc/6_
+    # - name: 7.
+    #   link: /study/etc/7_
+    # - name: 8.
+    #   link: /study/etc/8_
+    # - label: Getting Started
+    #   subsubfolderitems:
+    #     - name: Sidebar
+    #       link: /study/5/1/
+    #     - name: Sidebar
+    #       link: /study/5/2/

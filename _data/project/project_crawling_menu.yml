@@ -1,0 +1,25 @@
+- label: 웹크롤링
+  link: /project/
+  items:
+    - name: 1.라이브러리 설명
+      link: /project/crawling/1_라이브러리 설명
+    - name: 2.
+      link: /project/crawling/2_
+    # - name: 3.
+    #   link: /project/crawling/3_
+    # - name: 4.
+    #   link: /project/crawling/4_
+    # - name: 5.
+    #   link: /project/crawling/5_
+    # - name: 6.
+    #   link: /project/crawling/6_
+    # - name: 7.
+    #   link: /project/crawling/7_
+    # - name: 8.
+    #   link: /project/crawling/8_
+    # - label: Getting Started
+    #   subsubfolderitems:
+    #     - name: Sidebar
+    #       link: /study/5/1/
+    #     - name: Sidebar
+    #       link: /study/5/2/

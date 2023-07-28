@@ -1,21 +1,33 @@
-{% assign menus = site.data.[page.menubar] %}
+{% assign menudepthlevel = page.menubarcount %}
+{% assign menudepth1 = page.menubar %}
+{% assign menudepth2 = page.menubar2 %}
+{% if menudepthlevel == 1 %}
+    {% assign menus = site.data.[page.menubar] %}
+{% elsif menudepthlevel == 2 %}
+    {% assign menuss = site.data.[page.menubar] %}
+    {% for menudir in menuss %}
+        {% if menudir[0] == menudepth2 %}
+            {% assign menus = menudir[1] %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
 
 <aside class="menu">
-{% for menu in menus %}
-    <a href="{{ menu.link | relative_url }}" class="{% if menu.link == page.url %}is-active{% endif %}">{{ menu.label }}</a>
-    <ul class="menu-list">
-        {% for item in menu.items %}
-        <li>
-            <a id="btn1" href="{{ item.link | relative_url }}" class="{% if item.link == page.url %}is-active{% endif %}">{{ item.name }}</a>
-            {% if item.items %}
-            <ul>
-                {% for subitem in item.items %}
-                <li><a href="{{ subitem.link | relative_url }}" class="{% if subitem.link == page.url %}is-active{% endif %}">{{ subitem.name }}</a></li>
-                {% endfor %}
-            </ul>
-            {% endif %}
-        </li>
-        {% endfor %}    
-    </ul>
-{% endfor %}
+    {% for menu in menus %}
+        <a href="{{ menu.link | relative_url }}" class="{% if menu.link == page.url %}is-active{% endif %}">{{ menu.label }}</a>
+        <ul class="menu-list">
+            {% for item in menu.items %}
+            <li>
+                <a id="btn1" href="{{ item.link | relative_url }}" class="{% if item.link == page.url %}is-active{% endif %}">{{ item.name }}</a>
+                {% if item.items %}
+                <ul>
+                    {% for subitem in item.items %}
+                    <li><a href="{{ subitem.link | relative_url }}" class="{% if subitem.link == page.url %}is-active{% endif %}">{{ subitem.name }}</a></li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            </li>
+            {% endfor %}    
+        </ul>
+    {% endfor %}
 </aside>

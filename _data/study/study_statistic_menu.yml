@@ -1,0 +1,24 @@
+- label: Statistic
+  link: /study/
+  items:
+    - name: 1.확률
+      link: /study/statistic/1_확률
+    - name: 2.모집단과 샘플링
+      link: /study/statistic/2_모집단과 샘플링
+    - name: 3.표본분포
+      link: /study/statistic/3_표본분포
+    - name: 4.CLT와 LLN
+      link: /study/statistic/4_CLT와 LLN
+    - name: 5.가설검정
+      link: /study/statistic/5_가설검정
+    - name: 6.분산분석
+      link: /study/statistic/6_분산분석
+    - name: 7.회기분석
+      link: /study/statistic/7_회기분석
+    # - label: Getting Started
+    #   subsubfolderitems:
+    #     - name: Sidebar
+    #       link: /study/5/1/
+    #     - name: Sidebar
+    #       link: /study/5/2/
+    # <span style="color:red">1.컴퓨터 언어란?</span>

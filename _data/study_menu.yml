@@ -1,11 +1,15 @@
 - label: Math
-  link: /study/math/집합
+  link: /study/math/1_집합
 - label: Statistic
-  link: /study/statistic/1
+  link: /study/statistic/1_확률
 - label: Programming Language
-  link: /study/ProgrammingLanguage/컴퓨터 언어란
+  link: /study/ProgrammingLanguage/1_프로그래밍 언어란
 - label: Python
-  link: /study/python/왜 파이썬인가
+  link: /study/python/1_왜 파이썬인가
+- label: PythonModule
+  link: /study/pythonModule/1_
+- label: Etc
+  link: /study/etc/1_githubBlog
 
 # - label: Getting Started
 #   link: /study/
