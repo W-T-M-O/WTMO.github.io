@@ -1,0 +1,25 @@
+- label: Example
+  link: /study/
+  items:
+    - name: 1
+      link: /study/example/1
+    - name: 2
+      link: /study/example/2
+    - name: 3
+      link: /study/example/3
+    - name: 4
+      link: /study/example/4
+    - name: 5
+      link: /study/example/5
+    - name: 6
+      link: /study/example/6
+    - name: 7
+      link: /study/example/7
+    - name: 8
+      link: /study/example/8
+    # - label: Getting Started
+    #   subsubfolderitems:
+    #     - name: Sidebar
+    #       link: /study/5/1/
+    #     - name: Sidebar
+    #       link: /study/5/2/
