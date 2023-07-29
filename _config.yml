@@ -31,7 +31,7 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  gitwtmo
 
 # Build settings
-# theme: bulma-clean-theme
+theme: bulma-clean-theme
 remote_theme: chrisrhymes/bulma-clean-theme
 plugins:
   - jekyll-feed
@@ -40,6 +40,8 @@ plugins:
 
 
 show_sidebar: true
+paginate: 5
+paginate_path: "/blog/page:num"
 
 # Exclude from processing.
 # The following items will not be processed, by default.
