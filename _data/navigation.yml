@@ -3,9 +3,9 @@
 - name: project
   link: /project/
 - name: Blog
-  link: /blog/
-  # dropdown: 
-  #   - name: Page 2
-  #     link: /blog/it
+  link: /blog/index.html
+  dropdown: 
+    - name: it
+      link: /blog/it/index.html
   #   - name: Page 3
   #     link: /blog/---

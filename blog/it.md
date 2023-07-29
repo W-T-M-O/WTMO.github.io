@@ -1,9 +1,9 @@
 ---
 layout: blog
 title: Blog
-subtitle: Blog sub title
-show_sidebar: true
+permalink: /blog/it/
 pagination: 
   enabled: true
   category: it
+  permalink: /page:num/
 ---

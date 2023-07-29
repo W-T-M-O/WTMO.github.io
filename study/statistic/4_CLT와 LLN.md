@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Statistic
-subtitle: CLT와 LLN
+subtitle: 4.CLT와 LLN
 menubarcount: 2
 menubar: study
 menubar2: study_statistic_menu

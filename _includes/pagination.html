@@ -10,7 +10,7 @@
     <p class="pagination-next" disabled >Next</p>
     {% endif %}
     <ul class="pagination-list">
-        {% for page in (1..paginator.total_pages) %}
+        <!-- {% for page in (1..paginator.total_pages) %}
         {% if page == paginator.page %}
         <li><a class="pagination-link is-current">{{ page }}</a></li>
         {% elsif page == 1 %}
@@ -18,6 +18,13 @@
         {% else %}
         <li><a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}" class="pagination-link">{{ page }}</a></li>
         {% endif %}
-        {% endfor %}
+        {% endfor %} -->
+        {% if paginator.page_trail %}
+            {% for trail in paginator.page_trail %}
+                <li>
+                    <a {% if page.url == trail.path %}class="pagination-link is-current"{% else %}class="pagination-link"{% endif %} href="{{ trail.path | prepend: site.baseurl }}" title="{{trail.title}}">{{ trail.num }}</a>
+                </li>
+            {% endfor %}
+        {% endif %}
     </ul>
 </nav>
