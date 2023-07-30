@@ -5,8 +5,8 @@
       link: /study/programmingLanguage/1_프로그래밍 언어란
     - name: 2.객체 지향과 절차 지향
       link: /study/programmingLanguage/2_객체 지향과 절차 지향
-    # - name: 3.
-    #   link: /study/programmingLanguage/3_
+    - name: 3.인코딩과 디코딩
+      link: /study/programmingLanguage/3_인코딩과 디코딩
     # - name: 4.
     #   link: /study/programmingLanguage/4_
     # - name: 5.

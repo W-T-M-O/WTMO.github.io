@@ -5,6 +5,8 @@
 - name: Blog
   link: /blog/index.html
   dropdown: 
+    - name: info
+      link: /blog/info/index.html
     - name: it
       link: /blog/it/index.html
   #   - name: Page 3
