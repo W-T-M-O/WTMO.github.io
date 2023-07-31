@@ -1,6 +1,7 @@
 ---
 layout: blog
-title: Blogs of category it
+title: Blogs of category IT
+# hero_image: /path/to/title_small.jpg
 permalink: /blog/it
 pagination: 
   enabled: true

@@ -4,7 +4,7 @@ title: 23.07 5주차 공부 현황
 description: 
 date: 2023-07-28 15:21:59 +0900
 # hero_image: /bulma-clean-theme/img/blog-post-series.jpg
-# image: /bulma-clean-theme/img/blog-post-series.jpg
+# image: /path/to/title.jpg
 category: it
 hero_height: is-medium
 hero_darken: true

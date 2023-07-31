@@ -7,7 +7,7 @@
   dropdown: 
     - name: info
       link: /blog/info/index.html
-    - name: it
+    - name: IT
       link: /blog/it/index.html
   #   - name: Page 3
   #     link: /blog/---

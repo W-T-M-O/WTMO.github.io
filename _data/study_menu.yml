@@ -7,7 +7,7 @@
 - label: Python
   link: /study/python/1_왜 파이썬인가
 - label: PythonModule
-  link: /study/pythonModule/1_
+  link: /study/pythonModule/1_threading&multiprocessing
 - label: Etc
   link: /study/etc/1_githubBlog
 

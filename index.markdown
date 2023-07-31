@@ -3,10 +3,10 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: page
-title: Page Title
+title: WTMO's story
 subtitle: Page Subtitle
 image: /path/to/title.jpg
-description: The pages meta description
+description: about WTMO's life
 hero_image: /path/to/titles.jpg
 hero_height: is-fullheight
 ---
