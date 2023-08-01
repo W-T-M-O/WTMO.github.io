@@ -1,0 +1,36 @@
+- label: PythonLibrary
+  link: /study/
+  items:
+    - name: 1.threading&multiprocessing
+      link: /study/pythonLibrary/1_threading&multiprocessing
+    - name: 2.Numpy
+      link: /study/pythonLibrary/2_Numpy
+    - name: 3.Pandas
+      link: /study/pythonLibrary/3_Pandas
+    - name: 9.os.path-pathlib
+      link: /study/pythonLibrary/9_
+    # - name: 3.
+    #   link: /study/pythonLibrary/3_
+    # - name: 4.
+    #   link: /study/pythonLibrary/4_
+    # - name: 5.
+    #   link: /study/pythonLibrary/5_
+    # - name: 6.
+    #   link: /study/pythonLibrary/6_
+    # - name: 7.
+    #   link: /study/pythonLibrary/7_
+    # - name: 8.
+    #   link: /study/pythonLibrary/8_
+    # - name: 9.
+    #   link: /study/pythonLibrary/9_
+    # - name: 10.
+    #   link: /study/pythonLibrary/10_
+    # - name: 11.
+    #   link: /study/pythonLibrary/11_
+    # - label: Getting Started
+    #   subsubfolderitems:
+    #     - name: Sidebar
+    #       link: /study/5/1/
+    #     - name: Sidebar
+    #       link: /study/5/2/
+    # <span style="color:red">1.컴퓨터 언어란?</span>

@@ -19,3 +19,14 @@ summary: |-
 
 ### 3.인코딩과 디코딩
 > [프로그래밍 언어](/study/programmingLanguage/1_프로그래밍 언어란/프로그래밍 언어) 
+
+## PythonLibrary
+
+### 1. threading&multiprocessing
+> [threading&multiprocessing](/study/pythonLibrary/1_threading&multiprocessing)  
+
+### 2. Numpy
+> [Numpy](/study/pythonLibrary/2_Numpy)  
+
+### 3. Pandas
+> [Pandas](/study/pythonLibrary/3_Pandas)  

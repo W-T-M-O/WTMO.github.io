@@ -1,0 +1,24 @@
+- label: CV
+  link: /study/
+  items:
+    - name: 1.
+      link: /study/cv/1_
+    - name: 2.
+      link: /study/cv/2_
+    - name: 3.
+      link: /study/cv/3_
+    - name: 4.
+      link: /study/cv/4_
+    - name: 5.
+      link: /study/cv/5_
+    - name: 6.
+      link: /study/cv/6_
+    - name: 7.
+      link: /study/cv/7_
+    # - label: Getting Started
+    #   subsubfolderitems:
+    #     - name: Sidebar
+    #       link: /study/5/1/
+    #     - name: Sidebar
+    #       link: /study/5/2/
+    # <span style="color:red">1.컴퓨터 언어란?</span>

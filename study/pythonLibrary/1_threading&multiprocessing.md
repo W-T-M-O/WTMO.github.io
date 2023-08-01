@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Python
+title: PythonLibrary
 subtitle: 1.threading&multiprocessing
 menubarcount: 2
 menubar: study
-menubar2: study_pythonModule_menu
+menubar2: study_pythonLibrary_menu
 show_sidebar: false
 hero_image: /path/to/title.jpg
 hero_darken: true
@@ -14,7 +14,7 @@ toc_title: 목차
 ## **threading&multiprocessing**
 
 ### **threading**
-스레드를 늘려서 다른 코드들이 동시에 작동하는것 처럼 만들어주는 모듈
+스레드를 늘려서 다른 코드들이 동시에 작동하는것 처럼 만들어주는 라이브러리
 
 > **class threading.Thread(target=None, name=None, args=(), kwargs={}, *, daemon=None)** \***
 > * 스레드 생성을 하는 클래스선언
@@ -89,7 +89,7 @@ worker.join() # worker가 끝날때까지 대기(선택)
 ---
 
 ### **multiprocessing**
-프로세스를 늘려서 다른 코드들을 동시에 작동시켜주는 모듈  
+프로세스를 늘려서 다른 코드들을 동시에 작동시켜주는 라이브러리  
 multiprocessing의 경우 threading보다 더 다양한 클래스와 메서드들을 가지고 있다.
 
 > **class multiprocessing.Pool(processes=None)** \***
