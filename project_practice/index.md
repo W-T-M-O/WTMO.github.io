@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Project
+title: Project(practice)
 menubarcount: 1
-menubar: project_menu
+menubar: project_practice_menu
 show_sidebar: false
 hero_image: /path/to/title.jpg
 hero_darken: true

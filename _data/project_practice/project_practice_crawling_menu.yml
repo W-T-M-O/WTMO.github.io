@@ -1,10 +1,10 @@
 - label: 웹크롤링
-  link: /project/
+  link: /project_practice/
   items:
     - name: 1.라이브러리 설명
-      link: /project/crawling/1_라이브러리 설명
+      link: /project_practice/crawling/1_라이브러리 설명
     - name: 2.
-      link: /project/crawling/2_
+      link: /project_practice/crawling/2_
     # - name: 3.
     #   link: /project/crawling/3_
     # - name: 4.

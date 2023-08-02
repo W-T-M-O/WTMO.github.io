@@ -1,7 +1,7 @@
 ---
 layout: page
 title: PythonLibrary
-subtitle: 1.Pandas
+subtitle: 3.Pandas
 menubarcount: 2
 menubar: study
 menubar2: study_pythonLibrary_menu

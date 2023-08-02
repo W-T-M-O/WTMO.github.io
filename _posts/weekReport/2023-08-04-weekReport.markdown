@@ -30,3 +30,11 @@ summary: |-
 
 ### 3. Pandas
 > [Pandas](/study/pythonLibrary/3_Pandas)  
+
+### 4. Matplotlib&Seaborn
+> [Pandas](/study/pythonLibrary/4_Matplotlib&Seaborn)  
+
+## Project(practice)
+
+### 1. python_blog
+> [python_blog](/project_practice/python/1_blog) 

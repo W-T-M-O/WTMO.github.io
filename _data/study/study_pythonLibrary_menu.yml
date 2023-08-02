@@ -7,6 +7,8 @@
       link: /study/pythonLibrary/2_Numpy
     - name: 3.Pandas
       link: /study/pythonLibrary/3_Pandas
+    - name: 4.Matplotlib&Seaborn
+      link: /study/pythonLibrary/4_Matplotlib&Seaborn
     - name: 9.os.path-pathlib
       link: /study/pythonLibrary/9_
     # - name: 3.

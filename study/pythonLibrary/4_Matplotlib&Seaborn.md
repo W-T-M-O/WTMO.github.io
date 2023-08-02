@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Python
-subtitle: 1.
+title: PythonLibrary
+subtitle: 4.Matplotlib&Seaborn
 menubarcount: 2
 menubar: study
 menubar2: study_pythonLibrary_menu
@@ -49,43 +49,110 @@ x = ["data1", "data2", "data3", "data4"]
 y = [111, 156, 487, 445]  
 z = [50, 549, 450, 42]  
 ```
-
-plt.plot(x,y, label="plot")  
-
+아래와 같은 그래프들을 그릴 수 있으며
+```
+plt.bar(<data1>, <data2>, *arg)  
+plt.barh(<data1>, <data2>, *arg)  
+plt.plot(<data1>, <data2>, *arg)  
+plt.scatter(<data1>, <data2>, *arg)  
+```
+아래와 같은 옵션들을 사용이 가능하다
+```
+plt.figure(figsize=(10,5))  
+plt.plot(x,y, label="plot", width=0.2, color="red", marker="^")  
 plt.title("Title", fontdict={'fontsize': 10}, loc="center")  
 plt.xlabel("menu", fontdict={'fontsize': 10}, loc="left")  
 plt.ylabel("data", fontdict={'fontsize': 10}, loc="bottom")  
-plt.bar(x, y, width=0.2, label="bar")  
 plt.legend(loc="upper right")  
 plt.yticks([1,2,5,50,100,200])  
 plt.ylim(0, 1000)  
-plt.barh()  
 plt.grid(alpha=1, color="red", linewidth=10)  
-plt.scatter(y,z, color="red", marker="^")  
+```
 
-plt.show()  
-
-plt.figure(figsize=(10,5))  
-
-plt.subplot(2,1,1)  
-plt.bar(x, y, width=0.2, label="bar")  
-plt.subplot(2,1,2)  
-plt.scatter(np.random.rand(1,100),np.random.rand(100), color="red", marker="^")  
-
-plt.show()
-
-
-
-
-## Seaborn(Statisical Data Visualization library based on Matplotlib)
+## **Seaborn(Statisical Data Visualization library based on Matplotlib)**
 Matplotlib를 참고하여 제작하였으나 파이썬의 라이브러리에 더 친화적이다.  
-pandas의 dataframe을 사용하는데 용이함
+pandas의 dataframe을 사용하는데 용이함  
+기본적인 세팅은 plt와 같으며 아래와 같이 제공하는 데이터를 불러올 수 있다.
+```
+data = sns.load_dataset("penguins")
+```
+NaN 데이터는 아래와 같이 정리가 가능하며
+```
+data = data.dropna()  
+data.isnull()  
+data[data.isnull().any(axis=1)]
+```
+plt외에도 아래와 같은 세팅도 가능하다.
+```
+sns.set_palette("bone")
+```
+
+### **히스토그램**
+```
+sns.histplot(data=data, x="body_mass_g", bins=15, hue="species", multiple="stack")
+```
+
+### **밀도표**
+```
+sns.displot(data=data, kind="kde", x="body_mass_g", hue="species", col="island")
+```
+
+### **막대그래프**
+confidence interval(Default: 에러영역)를 가짐
+```
+sns.barplot(data=data, x="species", y="body_mass_g", hue="sex", ci="sd")
+sns.barplot(data=data, x="body_mass_g", y="species")
+```
+
+### **갯수표**
+```
+sns.countplot(data=data, x="sex")
+```
+
+### **박스 그래프**
+outlier를 확인할 수있음
+```
+sns.boxplot(data=data, x="sex", y="bill_depth_mm")
+```
+
+### **violin 그래프**
+분포를 확인하는데 효과적임
+sns.violinplot(data=data, x="species", y="bill_depth_mm")
+
+### **라인 그래프**
+경향성과 confidence interval(Default: 에러영역)를 가짐
+```
+sns.lineplot(data=data, x="body_mass_g", y="bill_depth_mm")
+```
+
+### **포인트 그래프**
+경향성과 confidence interval(Default: 에러영역)를 가짐
+```
+sns.pointplot(data=data, x="body_mass_g", y="bill_depth_mm")
+```
+
+### **분산도 그래프**
+```
+sns.scatterplot(data=data, x="body_mass_g", y="bill_depth_mm")
+```
+
+### **페어 그래프**
+numeric value들의 비교표들 모음
+```
+sns.pairplot(data=data, hue="species")
+```
+
+### **히트맵 그래프**
+상관관계를 색상으로 나타냄  
+상관계수 파악을 위해 corr matrix 생성하여 만듬  
+```
+corr = data.corr(numeric_only = True)
+
+sns.heatmap(data=corr, square=True, cmap="Blues", annot=True, fmt=".4f")
+```
+
+$ _ {23.08.02}$<br/><br/>
 
 
 
-
-$ _ {23.07.25}$<br/><br/>
-
-
-
-{% include tag.html tag="python" %}  {% include tag.html tag="" %}
+{% include tag.html tag="python" %}  {% include tag.html tag="matplotlib" %}  {% include tag.html tag="seaborn" %}

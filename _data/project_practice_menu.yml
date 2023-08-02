@@ -1,8 +1,10 @@
-- label: Project
-  link: /project/
+- label: Project_practice
+  link: /project_practice/
   items:
     - name: 웹크롤링
-      link: /project/crawling/1_라이브러리 설명
+      link: /project_practice/crawling/1_라이브러리 설명
+    - name: python
+      link: /project_practice/python/1_blog
     # - label: Getting Started
     #   subsubfolderitems:
     #     - name: Sidebar

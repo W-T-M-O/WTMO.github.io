@@ -1,7 +1,7 @@
 - name: study
   link: /study/
-- name: project
-  link: /project/
+- name: project(practice)
+  link: /project_practice/
 - name: Blog
   link: /blog/index.html
   dropdown: 

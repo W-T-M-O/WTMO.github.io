@@ -1,7 +1,7 @@
 ---
 layout: page
 title: PythonLibrary
-subtitle: 1.Numpy
+subtitle: 2.Numpy
 menubarcount: 2
 menubar: study
 menubar2: study_pythonLibrary_menu
