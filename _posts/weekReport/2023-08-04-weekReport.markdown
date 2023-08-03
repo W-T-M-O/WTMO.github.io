@@ -34,7 +34,30 @@ summary: |-
 ### 4. Matplotlib&Seaborn
 > [Pandas](/study/pythonLibrary/4_Matplotlib&Seaborn)  
 
+### 5. bs4&selenium
+> [Pandas](/study/pythonLibrary/5_bs4&selenium)  
+
 ## Project(practice)
 
-### 1. python_blog
-> [python_blog](/project_practice/python/1_blog) 
+### 1. 웹크롤링
+> [2.멜론차트](/project_practice/crawling/2_멜론차트) 
+
+### 2. python
+> [1.blog](/project_practice/python/1_blog) 
+
+## PythonFramework
+
+### 1. Django
+> [Django](/project_practice/python/1_Django) 
+
+### 2. Bootstrap
+> [Bootstrap](/project_practice/python/2_Bootstrap) 
+
+## Python
+
+### 4. 함수
+> [함수](/project_practice/python/4_함수)  
+> * reduce 함수 사용법 추가
+
+### 12. Advance
+> [Advance](/project_practice/python/12_Advance) 

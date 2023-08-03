@@ -1,0 +1,36 @@
+- label: PythonFramework
+  link: /study/
+  items:
+    - name: 1.Django
+      link: /study/pythonFramework/1_Django
+    - name: 2.Bootstrap
+      link: /study/pythonFramework/2_Bootstrap
+    - name: 3.
+      link: /study/pythonFramework/3_
+    - name: 4.
+      link: /study/pythonFramework/4_
+    # - name: 3.
+    #   link: /study/pythonFramework/3_
+    # - name: 4.
+    #   link: /study/pythonFramework/4_
+    # - name: 5.
+    #   link: /study/pythonFramework/5_
+    # - name: 6.
+    #   link: /study/pythonFramework/6_
+    # - name: 7.
+    #   link: /study/pythonFramework/7_
+    # - name: 8.
+    #   link: /study/pythonFramework/8_
+    # - name: 9.
+    #   link: /study/pythonFramework/9_
+    # - name: 10.
+    #   link: /study/pythonFramework/10_
+    # - name: 11.
+    #   link: /study/pythonFramework/11_
+    # - label: Getting Started
+    #   subsubfolderitems:
+    #     - name: Sidebar
+    #       link: /study/5/1/
+    #     - name: Sidebar
+    #       link: /study/5/2/
+    # <span style="color:red">1.컴퓨터 언어란?</span>

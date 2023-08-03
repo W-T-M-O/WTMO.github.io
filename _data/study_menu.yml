@@ -8,6 +8,8 @@
   link: /study/python/1_왜 파이썬인가
 - label: PythonLibrary
   link: /study/pythonLibrary/1_threading&multiprocessing
+- label: PythonFramework
+  link: /study/pythonFramework/1_Django
 - label: CV
   link: /study/cv/1_
 - label: Etc

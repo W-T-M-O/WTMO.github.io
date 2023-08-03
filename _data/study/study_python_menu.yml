@@ -23,6 +23,8 @@
       link: /study/python/10_동시성과 병렬성
     - name: 11.웹크롤링
       link: /study/python/11_웹크롤링
+    - name: 12.Advance
+      link: /study/python/12_Advance
     # - label: Getting Started
     #   subsubfolderitems:
     #     - name: Sidebar
