@@ -25,7 +25,7 @@ toc_title: 목차
 4. api version 지원
 * django-seed -> db에 임시 데이터 뿌려줌
   * INSTALLED_APPS "django_seed"
-  * cmd: python manage.py seed \<app_name\> --number=\<num\>
+  * cmd: python manage.py seed \<app_name\> \-\-number=\<num\>
 
 ### **서버 기본 세팅**
 ```cmd
@@ -224,13 +224,80 @@ def a(request):
 ### **template tags**
 탬플렛을 제작하는데 있어서 조건이나 데이터 활용등을 위한 태그
 
-* {\% csrf_token \%}
-* {\% cycle "a" "b" \%}
-* {\% extends \%}
-* {\% block \%}
+* {\% csrf_token \%}  
+    * csrf token을 필요로 하다는것을 나타낼때 사용
+* {\% cycle "a" "b" \%}  
+    * iter적인 상황에서 각 순서마다 서로 다른 영향을 주려고 할때 사용
+* {\% extends "<filename>.html" \%}  
+    * 한 html에서 다른 html을 확장하여 사용할때 사용  
+    * 자식페이지에 최상단에 필요하며 <filename>은 부모파일이다.
+* {\% block <name> \%} {\% endblock \%}  
+    * 한 html에서 다른 html을 확장하여 사용할때 사용  
+    * 부모페이지에서 자식을 넣을공간에, 자식페이지에서 넣을 내용을 감싼다.
 * {\% if \%}{\% elsif \%}{\% else \%}{\% endif \%}
+    * 조건문을 사용할때 사용
 * {\% for i in items \%}{\% endfor \%}
-* {\% includes \%}
+    * for문을 사용할때 사용
+        * forloop.counter 루프의 인덱스(1시작)
+        * forloop.counter0 루프의 인덱스(0시작)
+        * forloop.first 루프의 첫번째 True
+        * forloop.last 루프의 마지막 True
+* {\% includes "\<filename\>.html" \%}
+    * html에서 html 파일을 사용할때 사용할 \<filename\>을 작성
+    * extends보다 느리다.(랜더링이 느리다.)
+* {\% url "\<namespace\>" \%}
+    * \<namespace\>로 이동하게 할때 사용
+* {\% static "\<filepath\>" \%}
+    * \<filepath\>에 있는 static 파일 사용
+        * \<app_name\>/static/\<filepath\>으로 구성
+        * {\% load static \%}을 최상단에 작성해야함
+
+$ _ {23.08.03}$<br/><br/>
+
+----------------------------------------
+### **custom tags**
+탬플렛을 제작하는데 있어서 
+
+\<app_name\>/templatetags/custom_tags.py
+```
+from django import template
+from django.utils.html import mark_safe
+
+register = template.Library()
+
+@register.simple_tag(name=<tag_name>, takes_context=True)
+def tags_test(context): # context에는 해당 페이지 정보가 있으며 상세히 다룰 수 있다.
+    tag_html = "<span class='badge text-bg-primary'>태그</span>"
+
+    # mark_safe는 html로 사용해도 안전함을 알려줌 사용안하면 string으로 사용
+    return mark_safe(tag_html)
+```
+
+* {\% load custom_tags \%}  
+태그 사용할 html 최상단에 적용  
+* {\{data|\<tag_name\>}\}  
+태그 사용할 html 코드에 사용
+
+----------------------------------------
+### **custom filter**
+탬플렛을 제작하는데 있어서 원하는 내용만 보여주기 위하여 사용
+
+\<app_name\>/templatetags/custom_filters.py
+```
+from django import template
+
+register = template.Library()
+
+@register.filter(name=<filter_name>)
+def email_masker(value):
+    email_split = value.split("@")
+    return f"{email_split[0]}@******.***"
+```
+
+* {\% load custom_filters \%}  
+필터 사용할 html 최상단에 적용  
+* {\{data|\<filter_name\>}\}  
+필터 사용할 html 코드에 사용
 
 ----------------------------------------
 
@@ -238,7 +305,7 @@ def a(request):
 
 
 
-$ _ {23.08.03}$<br/><br/>
+$ _ {23.08.04}$<br/><br/>
 
 
 

@@ -60,4 +60,12 @@ summary: |-
 > * reduce 함수 사용법 추가
 
 ### 12. Advance
-> [Advance](/project_practice/python/12_Advance) 
+> [Advance](/project_practice/python/12_Advance)  
+
+## PythonFramework
+
+### 1. Django
+> [Django](/project_practice/pythonFramework/1_Django)  
+
+### 2. Bootstrap
+> [Bootstrap](/project_practice/pythonFramework/2_Bootstrap)  
