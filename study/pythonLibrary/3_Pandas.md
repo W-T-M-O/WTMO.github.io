@@ -79,6 +79,12 @@ pandas의 내부 구조는 numpy array기반으로 생성해서 universal functi
 ### **\<pd.data\>.describe()**
 \<pd.data\>의 전반적인 통계치를 제공
 
+### **pd.to_numeric(\<pd.data\>, error=\<state\>)**
+\<pd.data\>를 숫자로 변환한다.
+* error="ignore": 숫자가 안되면 원본
+* error="coerce": 숫자가 안되면 NaN
+* error="raise": 숫자가 안되면 에러발생
+
 ### **\<pd.data\>.sort_values(by=\<pd.columnName\>, ascending=False)**
 \<pd.data\>의 값에서 \<pd.columnName\>를 기준으로 정렬  
 ascending = True: 오름차순 False: 내림차순
@@ -88,6 +94,12 @@ ascending = True: 오름차순 False: 내림차순
 ### **pd.merge(\<pd.data\>, \<pd.data\>, on="A", how="outer")**
 how="outer", "inner", "left", "right"
 \<pd.data\>끼리 join을 이용한 합치기
+
+### **pd.merge_asof(\<pd.data\>, \<pd.data\>, on="A", direction="backword")**
+direction=  
+* backword는 left에 매칭하여 빈공간없이 합치기  
+* forword는 left에 매칭하여 빈공간있게 합치기  
+* nearest는 left에 매칭하여 근처값으로 합치기  
 
 ### **pd.concat([\<pd.data\>, \<pd.data\>], axis=\<num\>)**
 \<pd.data\>들을 \<num\>차원으로 합치기

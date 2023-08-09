@@ -5,18 +5,18 @@
       link: /project_practice/crawling/1_라이브러리 설명
     - name: 2.멜론차트
       link: /project_practice/crawling/2_멜론차트
-    # - name: 3.
-    #   link: /project/crawling/3_
+    - name: 3.종합탐색1
+      link: /project_practice/crawling/3_종합탐색1
     # - name: 4.
-    #   link: /project/crawling/4_
+    #   link: /project_practice/crawling/4_
     # - name: 5.
-    #   link: /project/crawling/5_
+    #   link: /project_practice/crawling/5_
     # - name: 6.
-    #   link: /project/crawling/6_
+    #   link: /project_practice/crawling/6_
     # - name: 7.
-    #   link: /project/crawling/7_
+    #   link: /project_practice/crawling/7_
     # - name: 8.
-    #   link: /project/crawling/8_
+    #   link: /project_practice/crawling/8_
     # - label: Getting Started
     #   subsubfolderitems:
     #     - name: Sidebar
