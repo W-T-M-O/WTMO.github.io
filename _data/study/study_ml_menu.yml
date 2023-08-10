@@ -1,0 +1,24 @@
+- label: ML
+  link: /study/
+  items:
+    - name: 1.EDA
+      link: /study/ml/1_EDA
+    - name: 2.평가지표
+      link: /study/ml/2_평가지표
+    - name: 3.model
+      link: /study/ml/3_model
+    # - name: 4.
+    #   link: /study/ml/4_
+    # - name: 5.
+    #   link: /study/ml/5_
+    # - name: 6.
+    #   link: /study/ml/6_
+    # - name: 7.
+    #   link: /study/ml/7_
+    # - label: Getting Started
+    #   subsubfolderitems:
+    #     - name: Sidebar
+    #       link: /study/5/1/
+    #     - name: Sidebar
+    #       link: /study/5/2/
+    # <span style="color:red">1.컴퓨터 언어란?</span>

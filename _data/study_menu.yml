@@ -10,6 +10,8 @@
   link: /study/pythonLibrary/1_threading&multiprocessing
 - label: PythonFramework
   link: /study/pythonFramework/1_Django
+- label: ML
+  link: /study/ml/1_EDA
 - label: CV
   link: /study/cv/1_
 - label: Etc

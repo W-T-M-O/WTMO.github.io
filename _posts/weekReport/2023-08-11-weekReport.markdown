@@ -20,3 +20,19 @@ summary: |-
 ### 1.웹크롤링
 > [3.종합탐색1](/project_practice/crawling/3_종합탐색1) 
 
+## PythonLibrary
+
+### 3. Pandas
+> [Pandas](/study/pythonLibrary/3_Pandas)  
+> * unpivot에 관하여 추가
+
+## ML
+
+### 1. EDA
+> [EDA](/study/ML/1_EDA)  
+
+### 2. 평가지표
+> [평가지표](/study/ML/2_평가지표)  
+
+### 3. model
+> [model](/study/ML/3_model)  

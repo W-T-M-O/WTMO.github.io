@@ -79,11 +79,18 @@ pandas의 내부 구조는 numpy array기반으로 생성해서 universal functi
 ### **\<pd.data\>.describe()**
 \<pd.data\>의 전반적인 통계치를 제공
 
+### **\<pd.data\>.groupby(\<columns_name\>)**
+\<pd.data\>에서 수치데이터를 \<columns_name\>의 기준으로 분별한다.
+
 ### **pd.to_numeric(\<pd.data\>, error=\<state\>)**
 \<pd.data\>를 숫자로 변환한다.
 * error="ignore": 숫자가 안되면 원본
 * error="coerce": 숫자가 안되면 NaN
 * error="raise": 숫자가 안되면 에러발생
+
+### **pd.to_datetime(\<pd.data\>)**
+\<pd.data\>를 시간타입의 값으로 변환한다.
+* \<pd.data\>.dt.hour 과같이 원하는 값을 추출할 수 있다.
 
 ### **\<pd.data\>.sort_values(by=\<pd.columnName\>, ascending=False)**
 \<pd.data\>의 값에서 \<pd.columnName\>를 기준으로 정렬  
@@ -116,6 +123,25 @@ drop= True는 기존 인덱스 삭제 False는 기존 인덱스 남겨둠
 > index에 입력한 \<columnName\>을 인덱스로 하고 values에 입력한 \<columnName\>이 columns가 되는 테이블을 만듬  
 >
 > aggfunc에 있는 \<option\>에 해당하는 값으로 column을 만듬 e.x. sum, mean, count 등등...
+
+$ _ {23.08.01}$<br/><br/>
+
+## **unpivot**
+pivot화 된 데이터를 풀어헤치는 행위  
+stack은 기준이 없을때 melt는 기준이 있을때 용이
+
+### **(with)stack**
+
+stack -> columns to index / unstack -> index to columns
+> * \<pd.data\>.stack(level=[0,...], dropna=True).reset_index().set_axis([], axis=1)  
+> level은 columns의 최상단부터 0으로 매겨지며 해당하는 columns를 index로 보내고 인덱스를 리셋하여 다시 네이밍을 하는 방법
+
+### **(with)melt**
+
+> * \<pd.data\>.melt(id_Vars=None, value_vars=None, var_name=None, value_name="value")  
+> id_Vars를 기준으로 데이터를 풀어헤치며 데이터를 value, columns를 variable로 분배한다.
+
+$ _ {23.08.09}$<br/><br/>
 
 ## **외부 Datafram 불러오기**
 
