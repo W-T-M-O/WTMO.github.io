@@ -12,6 +12,14 @@ toc: true
 toc_title: 목차
 ---
 
+## ordinal encoder
+어떠한 컬럼값이 object형일 경우 학습을 시키기 힘들기 때문에 값들을 0, 1, ... 으로 넘버링하는 방법(높고 낮음의 연관성이 있을때
+
+1. replace()
+data[<column_name>] = data[<column_name>].replace({"name": num})
+
+$ _ {23.08.11}$<br/><br/>
+
 ## onehot encoder
 어떠한 컬럼값이 object형일 경우 학습을 시키기 힘들기 때문에 값들을 0과 1로 이루어진 데이터로 변환하는 방법
 
@@ -34,7 +42,7 @@ ohe.categories_ # 카테고리 값이 도출됨
 ```
 
 ## StandardScaler
-평균이 0 분산이 1인 값으로 데이터를 표준화하는 작업으로 보통 정규분포의 경우에서 성능향상을 위해 사용이 된다.
+평균이 0 분산이 1인 값으로 데이터를 표준화하는 작업으로 보통 정규분포의 경우에서 성능향상을 위해 사용이 된다.(outlier 영향 강함)
 ```
 from sklearn.preprocessing import StandardScaler
 
@@ -49,6 +57,13 @@ from sklearn.preprocessing import MinMaxScaler
 
 scaler = MinMaxScaler()
 df_scaled = scaler.fit_transform(df)
+```
+
+## robust scaler
+해당하는 값에서 중앙값을뺀값을 IQR로 나누어 만들어지며, ourlier 영향이 적게 스케일링이 가능하다.
+```
+from sklearn.preprocessing import RobustScaler
+
 ```
 
 ## train/test data split

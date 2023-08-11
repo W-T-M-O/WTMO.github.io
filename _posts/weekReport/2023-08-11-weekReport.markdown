@@ -36,3 +36,6 @@ summary: |-
 
 ### 3. model
 > [model](/study/ML/3_model)  
+
+### 4. advance
+> [advance](/study/ML/4_advance)  
