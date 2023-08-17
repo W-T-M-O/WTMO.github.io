@@ -57,6 +57,26 @@ $ _ {23.08.03}$<br/><br/>
 ```
 $ _ {23.08.03}$<br/><br/>
 
+## **정규표현식**
+
+[참고사이트](https://regexr.com/)
+
+```
+import re
+```
+re.match(<str>, <data>) 문자열 처음부터 검색(객체)
+re.search(<str>, <data>) 문자열 전체 검색(객체)
+re.findall(<str>, <data>) 문자열 전체를 검색(list형)
+re.finditer(<str>, <data>) 문자열 전체를 검색(iter형)(객체)
+re.fullmatch(<str>, <data>) 완벽한 일치하는 검색(객체)
+<object>.group() 객체에서 매칭된 문자열을 반환
+<object>.start() 객체에서 매칭된 문자열의 시작 위치
+<object>.end() 객체에서 매칭된 문자열의 끝 위치
+<object>.span() 객체에서 매칭된 문자열의 시작과 끝(tuple형)
+re.sub(<from>, <to>, <data>) data에서 <from>을 <to>로 변환
+
+$ _ {23.08.16}$<br/><br/>
+
 
 
 

@@ -3,12 +3,12 @@
   items:
     - name: 1.githubBlog
       link: /study/etc/1_githubBlog
-    # - name: 2.
-    #   link: /study/etc/2_
-    # - name: 3.
-    #   link: /study/etc/3_
-    # - name: 4.
-    #   link: /study/etc/4_
+    - name: 2.git
+      link: /study/etc/2_git
+    - name: 3.socket
+      link: /study/etc/3_socket
+    - name: 4.자료구조
+      link: /study/etc/4_자료구조
     # - name: 5.
     #   link: /study/etc/5_
     # - name: 6.

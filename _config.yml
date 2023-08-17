@@ -64,6 +64,9 @@ gems:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+footer_menu: footer_menu
+
 collections:
   biography:
     output: true
