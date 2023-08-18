@@ -1,7 +1,7 @@
 ---
 layout: page
 title: ML
-subtitle: 3.model
+subtitle: 4.model
 menubarcount: 2
 menubar: study
 menubar2: study_ml_menu

@@ -28,14 +28,14 @@ summary: |-
 
 ## ML
 
-### 1. EDA
-> [EDA](/study/ML/1_EDA)  
+### 2. EDA
+> [EDA](/study/ML/2_EDA)  
 
-### 2. 평가지표
-> [평가지표](/study/ML/2_평가지표)  
+### 3. 평가지표
+> [평가지표](/study/ML/3_평가지표)  
 
-### 3. model
-> [model](/study/ML/3_model)  
+### 4. model
+> [model](/study/ML/4_model)  
 
-### 4. advance
-> [advance](/study/ML/4_advance)  
+### 5. advance
+> [advance](/study/ML/5_advance)  

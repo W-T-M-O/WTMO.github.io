@@ -1,10 +1,10 @@
 ---
 layout: page
-title: ML
-subtitle: 1.EDA
+title: DL
+subtitle: 2.EDA
 menubarcount: 2
 menubar: study
-menubar2: study_ml_menu
+menubar2: study_dl_menu
 show_sidebar: false
 hero_image: /path/to/title.jpg
 hero_darken: true
@@ -90,4 +90,4 @@ $ _ {23.08.09}$<br/><br/>
 
 
 
-{% include tag.html tag="ML" %}  {% include tag.html tag="EDA" %}
+{% include tag.html tag="DL" %}  {% include tag.html tag="EDA" %}

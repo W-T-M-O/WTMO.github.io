@@ -11,7 +11,9 @@
 - label: PythonFramework
   link: /study/pythonFramework/1_Django
 - label: ML
-  link: /study/ml/1_EDA
+  link: /study/ml/1_theory
+- label: DL
+  link: /study/dl/1_theory
 - label: CV
   link: /study/cv/1_
 - label: Etc

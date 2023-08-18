@@ -1,10 +1,10 @@
 ---
 layout: page
-title: ML
-subtitle: 4.advance
+title: DL
+subtitle: 5.advance
 menubarcount: 2
 menubar: study
-menubar2: study_ml_menu
+menubar2: study_dl_menu
 show_sidebar: false
 hero_image: /path/to/title.jpg
 hero_darken: true
@@ -39,4 +39,4 @@ $ _ {23.08.11}$<br/><br/>
 
 
 
-{% include tag.html tag="ML" %}  {% include tag.html tag="linear regression" %}
+{% include tag.html tag="DL" %}  {% include tag.html tag="advance" %}

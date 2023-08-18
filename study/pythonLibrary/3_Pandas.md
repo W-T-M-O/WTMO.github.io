@@ -64,6 +64,12 @@ pandas의 내부 구조는 numpy array기반으로 생성해서 universal functi
 ### **\<pd.data\>.values**
 \<pd.data\>의 값 추출
 
+### **\<pd.data\>.apply(\<func\>)**
+\<pd.data\>의 값을 \<func\>을 통해 가공하여 추출
+
+### **\<pd.data\>.str.contains(pat=\<string\>, regex=Bool)**
+\<pd.data\>에 \<string\>이 있는지 확인 regex=True(default)
+
 ### **\<pd.data\>[\<columnName\>]**
 \<pd.data\>의 해당 컬럼 기반의 시리즈 추출
 
