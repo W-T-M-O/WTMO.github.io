@@ -2,19 +2,9 @@
   link: /study/
   items:
     - name: 1.
-      link: /study/CV/1_
+      link: /study/CV/1_null
     - name: 2.
-      link: /study/CV/2_
-    - name: 3.
-      link: /study/CV/3_
-    - name: 4.
-      link: /study/CV/4_
-    - name: 5.
-      link: /study/CV/5_
-    - name: 6.
-      link: /study/CV/6_
-    - name: 7.
-      link: /study/CV/7_
+      link: /study/CV/2_null
     # - label: Getting Started
     #   subsubfolderitems:
     #     - name: Sidebar
