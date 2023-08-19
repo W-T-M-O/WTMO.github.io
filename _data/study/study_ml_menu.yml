@@ -2,21 +2,21 @@
   link: /study/
   items:
     - name: 1.theory
-      link: /study/ml/1_theory
+      link: /study/ML/1_theory
     - name: 2.EDA
-      link: /study/ml/2_EDA
+      link: /study/ML/2_EDA
     - name: 3.평가지표
-      link: /study/ml/3_평가지표
+      link: /study/ML/3_평가지표
     - name: 4.model
-      link: /study/ml/4_model
+      link: /study/ML/4_model
     - name: 5.advance
-      link: /study/ml/5_advance
+      link: /study/ML/5_advance
     # - name: 5.
-    #   link: /study/ml/5_
+    #   link: /study/ML/5_
     # - name: 6.
-    #   link: /study/ml/6_
+    #   link: /study/ML/6_
     # - name: 7.
-    #   link: /study/ml/7_
+    #   link: /study/ML/7_
     # - label: Getting Started
     #   subsubfolderitems:
     #     - name: Sidebar
