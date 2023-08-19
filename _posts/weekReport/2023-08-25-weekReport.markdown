@@ -30,4 +30,4 @@ summary: |-
 > [socket](/study/etc/3_socket) 
 
 ### 4.자료구조
-> [자료구조](/study/etc/4_자료구조) 
+> [자료구조](/study/etc/4_자료구조)
