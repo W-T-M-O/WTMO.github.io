@@ -18,6 +18,13 @@ toc_title: 목차
 1. replace()
 data[<column_name>] = data[<column_name>].replace({"name": num})
 
+2. 
+```
+from sklearn.preprocessing import OrdinalEncoder
+
+ohe = OrdinalEncoder()
+train_ = ohe.fit_transform(train([<column_name>])) # 분류된 데이터가 도출됨
+```
 $ _ {23.08.11}$<br/><br/>
 
 ## onehot encoder
@@ -68,11 +75,27 @@ from sklearn.preprocessing import RobustScaler
 
 ## train/test data split
 데이터가 학습및 학습결과 확인을 위하여 데이터를 분할해주는 작업이다.
-
+### train_test_split
 ```
 from sklearn.model_selection import train_test_split
 
 X_train, X_test, Y_train, Y_test = train_test_split(X ,y, test_size=0.2, random_state=54)
+```
+> random_state는 일종의 시드값으로 변화가없으면 계속 같은 값이 나온다.
+### StratifiedShuffleSplit
+특정 \<data_\>를 동일한 비율로 나누고 싶을때 사용
+```
+split = StratifiedShuffleSplit(n_splits=1, test_size=0.2, random_state=54)
+
+for train_idx, test_idx in split.split(X, <data_>):
+
+    X_train = X[train_idx]
+
+    X_test = X[test_idx]
+
+    y_train = y[train_idx]
+
+    y_test = y[test_idx]
 ```
 > random_state는 일종의 시드값으로 변화가없으면 계속 같은 값이 나온다.
 

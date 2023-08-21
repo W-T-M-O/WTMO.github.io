@@ -15,19 +15,10 @@ summary: |-
     
     study 업로드현황
 ---
-## python
+## ML
 
-### 12.advance
-> [advance](/study/python/12_Advance)  
-> * 정규표현식 사용법추가
+### 1.theory
+> [theory](/study/ML/1_theory)  
 
-## etc
-
-### 2.git
-> [git](/study/etc/2_git) 
-
-### 3.socket
-> [socket](/study/etc/3_socket) 
-
-### 4.자료구조
-> [자료구조](/study/etc/4_자료구조)
+### 5.advance
+> [advance](/study/ML/5_advance)  

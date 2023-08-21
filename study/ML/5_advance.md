@@ -12,6 +12,33 @@ toc: true
 toc_title: 목차
 ---
 
+## gridSearchCV
+하이퍼 파라미터를 다양하게 활용하여 최적의 값을 찾는 방법
+```
+from sklearn.model_selection import GridSearchCV
+
+param_grid = [
+    {'' : []},
+    {'bootstrap' : [False]}
+]
+model = <model>
+grid_search = GridSearchCV(model, param_grid, cv=5)
+grid_search.fit()
+
+grid_search.best_params_
+grid_Search.best_estimator_
+grid_Search.cv_results_
+```
+* best_params_  
+최적의 파라미터 제공
+
+* best_estimator_  
+최적의 파라미터 모형 제공
+
+* cv_results_  
+iter한 객체로 전체 하이퍼파라미터 별 평가 확인가능
+
+
 ## 추천시스템
 사용자에게 추천정보를 제공하는 방법
 
