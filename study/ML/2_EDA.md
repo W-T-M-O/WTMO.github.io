@@ -18,13 +18,15 @@ toc_title: 목차
 1. replace()
 data[<column_name>] = data[<column_name>].replace({"name": num})
 
-2. 
+2. OrdinalEncoder
+
 ```
 from sklearn.preprocessing import OrdinalEncoder
 
 ohe = OrdinalEncoder()
 train_ = ohe.fit_transform(train([<column_name>])) # 분류된 데이터가 도출됨
-```
+```  
+
 $ _ {23.08.11}$<br/><br/>
 
 ## onehot encoder
@@ -98,6 +100,8 @@ for train_idx, test_idx in split.split(X, <data_>):
     y_test = y[test_idx]
 ```
 > random_state는 일종의 시드값으로 변화가없으면 계속 같은 값이 나온다.
+### Kfold
+### StratifiedKfold
 
 ### cross validation issue
 train/test로 나누어서 진행함에 있어서 보면 매번 결과가 뒤죽박죽으로 나올 수 있다. 이러한 이유는 train, test에 해당하는값이 치우쳐진 값으로 가질 수 있기 때문이며 이를 위해 아래와 같이 여러갯수로 분할하여 시행하는것이 더욱 정확하다고 볼 수있다.
