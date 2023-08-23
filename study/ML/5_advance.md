@@ -38,6 +38,12 @@ grid_Search.cv_results_
 * cv_results_  
 iter한 객체로 전체 하이퍼파라미터 별 평가 확인가능
 
+## Text Mining Process
+1. corpus 정의(수집)
+2. text cleaning(불용어 제거, 형태 통일)
+3. tokenization(분석 단위 결정)
+4. modeling
+5. visualization
 
 ## 추천시스템
 사용자에게 추천정보를 제공하는 방법

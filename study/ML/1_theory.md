@@ -98,13 +98,51 @@ odds에 log를 취한 함수
 
 $$logit(p) = log(\tfrac{p}{1-p})$$
 
-* logistic function  
-logit을 기반으로 만든 함수로 0에서 1까지 곡선형을 가진다.  
+* sigmoid function  
+logit 함수의 입력과 출력을 바꾼함수  
 
-$$logistic \, function = \tfrac{e^{\beta X_i}}{1+e^{\beta X_i}}$$
+$$p(X) = \tfrac{1}{1+e^{-\beta X}}$$
+
+* logistic function  
+sigmoid 함수 만들어진 예측 모델  
+
+Logistic Regression은 $x$가 변할때 $y$가 1이 되는 경향성을 따지는 모델로서 아래와 같은 확률에서 시작된다.
+
+$$p(X) = Pr(y=1|X)$$
+
+우리가 parameter Estimation을 통하여 구하려고 하는 sigmoid의 $\hat{\beta}$는 이상 적으로 2가지 경우로 나뉜다.
+
+> 1. $y=1$이라서 $\hat{Pr(y=1\|X)}$이 1에 수렴하는 경우  
+> 2. $y=0$이라서 $1-\hat{Pr(y=1\|X)}$이 1에 수렴하는 경우
+
+1.의 경우 최대 확률은 $\prod_{s \, in \, y_i=1} p(x_i)$  
+2.의 경우 최대 확률은 $\prod_{s \, in \, y_i=0} (1-p(x_i))$  
+종합적인 최대 확률은 $L(\beta) = \prod_{s \, in \, y_i=1} p(x_i) \times \prod_{s \, in \, y_i=0} (1-p(x_i))$ 가 된다.  
+
+이 수식을 단순화 하면 아래의 수식이 된다.
+
+$$L(\beta) = \prod_s p(x_i)^{y_i} \times \prod_s (1-p(x_i))^{1-y_i}$$
+
+loss function을 활용해 최적의 함수를 찾아야하는 위의 수식은 미분에 있어서 쉽지 않다. 그래서 log를 이용한 log likelihood 함수를 만들고 음수를 취해주고 전체 샘플수로 나눠주면 loss function을 만들 수 있다.
+
+$$J(\beta) = -\tfrac{1}{n}(\sum_{i=1}^n y_i log(p(x_i)) \times \sum_{i=1}^n (1-y_i) log(1-p(x_i)))$$
+
+$$\tfrac{\partial}{\partial\beta_j}J(\beta) = \tfrac{1}{n}(\sum_{i=1}^n p(x^{(i)})-y^{(i)})x_j^{(i)}$$
+
+### SoftMax
+Logistic Regression의 경우 binary classification의 방법을 위하여 고안이 되었으나 multinomial classificaion에 활용할 수 있게 하는 방법이 SoftMax 기법이다.  
+이는 도출된 경향성 점수를 $s(y_i) = \tfrac{e^{y_i}}{\sum e^y}$로 총합 1의 확률로 만들게된다.  
+이러한 확률을 이용하여 크로스 엔트로피(주어진 정답의 불확실성의 정도) 비용함수가 최소가 되게한다.
 
 ## Decision Tree
-Tree 구조로 형성된 의사결정 분류 알고리즘
+Tree 구조로 형성된 의사결정 분류 알고리즘  
+데이터의 회전성에 취약하여 PCA(주성분 분석)를 사용하면 좋다
+
+### CART(Classification And Regression Tree)
+tree가 subset을 나누는데 있어 gini가 작은 subset을 만드는 방법으로 greedy algorithm이다. loss function은 아래와 같다.
+
+$$J = \tfrac{m_{left}}{m}G_{left}+\tfrac{m_{right}}{m}G_{right}$$
+
 ## Naive Bayes
 특성들 사이의 독립을 가정하는 베이즈 정리를 이용한 확률 분류기
 * Bayes Theorem  
@@ -123,14 +161,16 @@ $$P(c\|x)=\tfrac{P(x\|c)P(c)}{P(x)}$$
     * $P(x\|c)$ likelihood
     특성에서의 발생이 될 확률
 
-## Support Vector Machine(SVM)
-카테고리들이 있을때 데이터들의 사상된 공간의 경계중 가장 큰 너비를 가진 경계를 찾는 방법
+## Support Vector Machine(SVM)(SVC,SVR)
+카테고리들이 있을때 데이터들의 사상된 공간의 경계중 가장 큰 너비를 가진 경계를 찾는 방법  
+(복잡, 작거나 중간 데이터셋에 적합, scaler를 하면 효율 증가)
+(SVC는 kernel을 통해 PolynoialFeature없이도 고차원 적용가능, 실제로 변수가 만들어지지 않아 속도빠름)
 * margin  
 서로 다른 두가지 클래스의 데이터에서 어떠한 선으로 구분을 할경우 해당 선의 너비를 의미한다.
 * support vectors  
 margin에 해당하는 위치에 놓여있는 elements를 의미한다.
 * RBF(Radial Basis Fuction) Kernel
-방사형 기저 함수라 불리며 차원을 높여서 margin을 설계하는 방법
+방사형 기저 함수라 불리며 비선형 데이터에서 차원을 높여서 margin을 설계하는 방법
 
 ## K Nearest Neighbors(KNN)
 새로운 데이터를 입력받을때 가까운 데이터들의 분포에 따라 통계적으로 분류를 하는 알고리즘
@@ -148,14 +188,19 @@ weak learner를 생성해서 구한 error를 토대로 가중치를 가해 error
 우수한 모델들에서 나온 결과를 선형적으로 결합하여 성능을 향상하는 방법
 ### Random Forest
 bagging을 사용한 알고리즘으로 모든 변수를 기반으로 Tree 생성
-### Extra Trees Boosting
-boosting을 사용한 알고리즘으로 무작위 변수로 weak tree를 생성하여 진행
+### Extra Trees
+bagging을 사용하지 않는 random forest 알고리즘
+### AdaBoost
+boosting을 사용하여 샘플의 가중치를 더해 순차적 학습을 하는 알고리즘
 ## Decision Tree Gradient Boosting
 * Gradient Boosting은 미분을 통해 Residual을 줄이는 방향으로 weak learner들을 결합하는 방법(과적합 이슈의 발생)
 ### Extreme Gradient Boosting(XGB)
 Regularization과 다양한 loss function을 지원하여 과적합을 감소시킨 방법
 ### Light Gradient Boosting
-histogram-based/GOSS/EFB와 같은 알고리즘으로 학습데이터를 감소시켜 속도를 향상시킨 방법(데이터가 적으면 과적합 위험)
+histogram-based/GOSS/EFB와 같은 알고리즘으로 학습데이터를 감소시켜 속도를 향상시킨 방법  
+GBM은 Level-wise한데 LGBM은 Leaf-wise해서 시간은 적게 걸려도 깊은 트리형으로 문제없이 작업한다.  
+GOSS(Gradient-based One-Side Sampling)으로 infomation gain을 계산할때 기울기(가중치)가 작은 변수에 승수 상수로 데이터를 증폭시킴  
+(데이터가 적으면 과적합 위험)
 ### Categorical Gradient Boosting
 범주형 변수를 위한 알고리즘으로 one-hot encoding사용시 증폭되는 메모리 이슈를 보완하였음
 ### Natural Gradient Boosting

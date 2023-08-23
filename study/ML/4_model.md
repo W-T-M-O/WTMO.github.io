@@ -34,13 +34,22 @@ tree 형태로 구분이 되며 feature들에 따라 결과를 다각형의 직�
 
 ```
 from sklearn.tree import DecisionTreeRegressor
+from sklearn.tree import export_graphviz
+from graphviz import Source
 
 model = DecisionTreeRegressor(random_state=100, min_samples_leaf=1, min_samples_split=5, max_depth=5)
+
+export_graphviz(model, out_file=<dir>/.<name.dot>)
+Source.from_file(<dir>/.<name.dot>)
 ```
 > * random_state 시드값
 > * max_depth 최대 깊이
 > * min_samples_leaf 리프 원소의 최소갯수
 > * min_samples_split root 원소의 최소갯수
+> * export_graphviz tree를 그림으로 저장
+> * Source.from_file tree를 저장된 그림 가시화
+
+> * feature_importances_ 모든 decision tree가 가지는 특성
 
 ### RandomForestClassifier
 다수의 트리들을 랜덤하게 학습하는 방법으로 과적합을 방지하기 위해 탄생하였으나 비교적 느리다. feature들에 따라 결과를 구역으로 나뉘는 형태이다.  
