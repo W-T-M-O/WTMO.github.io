@@ -27,6 +27,12 @@ ohe = OrdinalEncoder()
 train_ = ohe.fit_transform(train([<column_name>])) # 분류된 데이터가 도출됨
 ```  
 
+3. factorize
+
+```
+pd.factorize()
+```
+
 $ _ {23.08.11}$<br/><br/>
 
 ## onehot encoder

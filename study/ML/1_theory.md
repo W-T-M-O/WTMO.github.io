@@ -136,7 +136,7 @@ Logistic Regression의 경우 binary classification의 방법을 위하여 고�
 
 ## Decision Tree
 Tree 구조로 형성된 의사결정 분류 알고리즘  
-데이터의 회전성에 취약하여 PCA(주성분 분석)를 사용하면 좋다
+데이터의 회전성에 취약하여 PCA(주성분 분석, 차원축소)를 사용하면 좋다
 
 ### CART(Classification And Regression Tree)
 tree가 subset을 나누는데 있어 gini가 작은 subset을 만드는 방법으로 greedy algorithm이다. loss function은 아래와 같다.
@@ -172,8 +172,23 @@ margin에 해당하는 위치에 놓여있는 elements를 의미한다.
 * RBF(Radial Basis Fuction) Kernel
 방사형 기저 함수라 불리며 비선형 데이터에서 차원을 높여서 margin을 설계하는 방법
 
-## K Nearest Neighbors(KNN)
+## Clustering
+흩어져있는 원소들을 군집화하여 유사한 데이터끼리 묶는 방식으로 하는 비지도학습
+
+### K Nearest Neighbors(KNN)
 새로운 데이터를 입력받을때 가까운 데이터들의 분포에 따라 통계적으로 분류를 하는 알고리즘
+
+### K means
+임의의 centroid를 지정후 근접합 데이터를 군집화 한다음 centroid를 재설정하는것을 반복하여 군집을 구하는 방법(변수들의 스케일링을 하면 효과가 좋다)
+
+### DB Scan
+밀도 기반 군집화 기법으로 범위내에 있는 샘플들의 갯수가 군집화가 되는 기준이다.
+
+## 가우시안 혼합 모델(GMM)
+Gaussian Mixture Model은 분류가될 집합이 가우시안 분포로 되어있다고 가정하여 클러스터를 구성하는 확률 모델이다.
+흩어져있는 원소들을 군집화하여 유사한 데이터끼리 묶는 방식으로 하는 비지도학습
+
+
 ## Bagging VS Boosting
 * bagging  
 분산을 감소시키는 방법으로  
@@ -192,6 +207,7 @@ bagging을 사용한 알고리즘으로 모든 변수를 기반으로 Tree 생�
 bagging을 사용하지 않는 random forest 알고리즘
 ### AdaBoost
 boosting을 사용하여 샘플의 가중치를 더해 순차적 학습을 하는 알고리즘
+
 ## Decision Tree Gradient Boosting
 * Gradient Boosting은 미분을 통해 Residual을 줄이는 방향으로 weak learner들을 결합하는 방법(과적합 이슈의 발생)
 ### Extreme Gradient Boosting(XGB)
@@ -202,9 +218,36 @@ GBM은 Level-wise한데 LGBM은 Leaf-wise해서 시간은 적게 걸려도 깊�
 GOSS(Gradient-based One-Side Sampling)으로 infomation gain을 계산할때 기울기(가중치)가 작은 변수에 승수 상수로 데이터를 증폭시킴  
 (데이터가 적으면 과적합 위험)
 ### Categorical Gradient Boosting
-범주형 변수를 위한 알고리즘으로 one-hot encoding사용시 증폭되는 메모리 이슈를 보완하였음
+범주형 변수를 위한 알고리즘으로 one-hot encoding사용시 증폭되는 메모리 이슈를 보완하였음  
+(oblivious Decision Tree, Feature Combination)
 ### Natural Gradient Boosting
 각 예측값에 대한 신뢰도를 도출해주는 알고리즘으로 시간이 오래걸리는 단점이 있음
+
+---
+
+## 차원축소
+대부분의 데이터는 고차원으로 구성이 되어있어도 가까이에 있는 경향이 많아 저차원 공간으로 투영(projection)과 같은 차원축소 기법을 통해 해결할 수 있다.  
+
+### 매니폴트
+고차원에서 휘어져있는 형태로 고차원에서 가까워 보이지만 실제로는 멀리있는 데이터를 효과적으로 차원 축소 하는 방법
+
+### 주성분 분석(PCA)
+Principal Component Analysis는 보편적인 차원축소 기법으로 분포도를 최대한 유지하는 방향으로 차원을 축소하는 방법이다.(평균이 0인 StandardScaler가 필요하다, sklearn은 자체 지원)  
+sklearn은 explained_variance_ratio를 통하여 축소한 차원에서 얼마나 분산의 손실이 발생했는지 알 수 있다.
+
+### 특잇값 분해(SVD)
+Singular Value Decomposition은 주성분을 찾는 방법으로 $m \times n$인 행렬 $A_1$에 대한 특잇값 분해는 $U_1\sum_1V_1^T$이다. 이는 유사역행렬을 구하는 방법과 유사하지만 유사역행렬의 $\sum$은 $k \times k$로 변동성이 있지만 SVD는 $m \times n$이다.(thin SVD와 같이 축소기법을 사용하면 크기가 감소하기도 한다.)  
+SVD를 통하여 구한 $V$의 각 열을 순서대로 $c_1, c_2, ...$로 주성분의 축을 구할 수 있다.  
+$c_1, c_2, ...$의 갯수를 통하여 투영하려는 차원을 정할 수 있다.
+
+$$X_{d-proj} = XW_d$$
+
+### 지역선형임베딩(LLE)
+Locally Linear Embedding은 투영을 하지않고 매니폴드를 활용하는 기법이다. 이웃 원소와의 선형성을 측정하여 국부적 관계가 보존되는 저차원을 표현함
+
+### t-SNE
+비슷한 샘플과 비슷하지 않은샘플로 구분하여 차원을 축소하는 방법
+
 
 $ _ {23.08.21~25}$<br/><br/>
 
