@@ -12,30 +12,18 @@ toc: true
 toc_title: 목차
 ---
 
-## grid search
-여러개의 파라미터를 한번에 활용해서 결과를 도출
+## XAI
+explainable AI를 의미하며 Black box인 DL을 설명 가능하게 하는 기술을 의미한다.
 
-```
-from sklearn.model_selection import GridSearchCV
+### LIME
+Local Interpretable Model-Agnostic Explanations  
+예측하려는 값의 근처 데이터들을 해석 가능한 모델로 학습하여 분류기의 성능을 설명하는 기술
+### SHAP
+SHapley Additive exPlanations
+머신러닝 설명기법으로 특성의 기여도를 계산하여 관측치를 설명하는 기술
 
-params = {
-    <parameter>: [],
-    <parameter>: [],
-}
-model = <imported_model>()
-models = GridSearchCV(model, params, cv = 5)
-models.fit()
-models.best_params_
-```
-> * cv: cross validation
 
-## feature importance(random forest)
-어떤 feature가 결과에 영향을 크게 미쳤는지 확인하는 방법
-```
-data = model.feature_importances_
-```
-
-$ _ {23.08.11}$<br/><br/>
+$ _ {23.08.31}$<br/><br/>
 
 
 

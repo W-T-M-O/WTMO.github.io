@@ -12,79 +12,28 @@ toc: true
 toc_title: 목차
 ---
 
-## ordinal encoder
-어떠한 컬럼값이 object형일 경우 학습을 시키기 힘들기 때문에 값들을 0, 1, ... 으로 넘버링하는 방법(높고 낮음의 연관성이 있을때
+keras.layers.Dense(10, activation="relu", kernel_initializer="he_normal")
+node is 10, relu activation function, He normalize initializer
 
-1. replace()
-data[<column_name>] = data[<column_name>].replace({"name": num})
+그래디언트 클래핑
+optimizer = keras.optimizers.SGD(clipvalue=1.0)
+optimizer = keras.optimizers.SGD(clipnorm=1.0)
 
-$ _ {23.08.11}$<br/><br/>
 
-## onehot encoder
-어떠한 컬럼값이 object형일 경우 학습을 시키기 힘들기 때문에 값들을 0과 1로 이루어진 데이터로 변환하는 방법
+# 고속 옵티마이저
+* 모멘텀 최적화
+경사 하강법에 모멘텀을 추가한 형태(초기에는 느린데 모멘텀을 추가로 가져서 종단속도까지 빠르게 도달함)
+optimizer = keras.optimizers.SGD(learning_rate=0.001, momentum=0.9)
+* 네스테로프 가속 경사  
+모멘텀에 미리 한스탭 나아간것을 추가하여 진동을 감소시킴
+optimizer = keras.optimizers.SGD(learning_rate=0.001, momentum=0.9, nesterov=True)
 
-1. train, test 카테고리 차이가 없을때 쉽게하는법  
-```
-pd.get_dummies(data=[], columns=[], drop_first=False)
-```
-* data는 참조가 되는 데이터들을 나타낸다.
-* columns는 데이터중 onehotencoding을 하려는 컬럼값들을 나타낸다.
-* drop_first는 encoding하여 분할되는 컬럼들중 첫번째를 넣을지 뺄것인지 정하는것으로 선택적이다.
 
-2. train, test 카테고리 차이가 있을때 진행하는법  
+전이학습
+<model>.layers[:-1] -> 최종층을 제외하고 추출
+<clone_model> = keras.models.clone_model(<model>)
+<clone_model>.set_weights(<model>.get_weights())
 
-```
-from sklearn.preprocessing import OneHotEncoder
-
-ohe = OneHotEncoder(sparse=False)
-train_ = ohe.fit_transform(train([<column_name>])) # 분류된 데이터가 도출됨
-ohe.categories_ # 카테고리 값이 도출됨
-```
-
-## StandardScaler
-평균이 0 분산이 1인 값으로 데이터를 표준화하는 작업으로 보통 정규분포의 경우에서 성능향상을 위해 사용이 된다.(outlier 영향 강함)
-```
-from sklearn.preprocessing import StandardScaler
-
-scaler = StandardScaler()
-df_scaled = scaler.fit_transform(df)
-```
-
-## min max scaler
-데이터를 0~1의 값으로 변환을 하게 되며 정규분포가 아닐경우 사용하게 된다.
-```
-from sklearn.preprocessing import MinMaxScaler
-
-scaler = MinMaxScaler()
-df_scaled = scaler.fit_transform(df)
-```
-
-## robust scaler
-해당하는 값에서 중앙값을뺀값을 IQR로 나누어 만들어지며, ourlier 영향이 적게 스케일링이 가능하다.
-```
-from sklearn.preprocessing import RobustScaler
-
-```
-
-## train/test data split
-데이터가 학습및 학습결과 확인을 위하여 데이터를 분할해주는 작업이다.
-
-```
-from sklearn.model_selection import train_test_split
-
-X_train, X_test, Y_train, Y_test = train_test_split(X ,y, test_size=0.2, random_state=54)
-```
-> random_state는 일종의 시드값으로 변화가없으면 계속 같은 값이 나온다.
-
-### cross validation issue
-train/test로 나누어서 진행함에 있어서 보면 매번 결과가 뒤죽박죽으로 나올 수 있다. 이러한 이유는 train, test에 해당하는값이 치우쳐진 값으로 가질 수 있기 때문이며 이를 위해 아래와 같이 여러갯수로 분할하여 시행하는것이 더욱 정확하다고 볼 수있다.
-
-```
-from sklearn.model_selection import KFold
-kf = KFold(n_splits=5, random_state=100)
-
-for train_index, test_index in kf.split(range(len(data))):
-```
 
 $ _ {23.08.09}$<br/><br/>
 
