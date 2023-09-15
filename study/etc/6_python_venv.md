@@ -15,16 +15,24 @@ toc_title: 목차
 ## venv(normal setting, makedir it self)
 
 python -m venv <venv_name>  
+
 source <venv_name>/bin/activate # mac  
+
 source <venv_name>/Script/activate # git bash with window  
+
 Scripts\activate.bat # cmd with window  
+
 deactivate  
 
 ## pipenv(not makedir it self)
 pip install pipenv  
+
 python -m pipenv --python <version>  
+
 python -m pyenv versions # 여기에 버전들 깔림  
+
 python -m pipenv shell  
+
 exit  
 
 * pipenv --venv  
@@ -34,9 +42,13 @@ exit
 ### jupyter setting
 
 pip install jupyter  
+
 pip install ipykernel  
+
 python -m ipykernel install — user — name 가상환경이름  
+
 jupyter kernelspec list  
+
 jupyter kernelspec uninstall 가상환경이름  
 
 
