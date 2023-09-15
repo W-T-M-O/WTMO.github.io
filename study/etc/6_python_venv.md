@@ -14,11 +14,11 @@ toc_title: 목차
 
 ## venv(normal setting, makedir it self)
 
-python -m venv <venv_name>   
+python -m venv \<venv_name\>   
 
-source <venv_name>/bin/activate # mac   
+source \<venv_name\>/bin/activate # mac   
 
-source <venv_name>/Script/activate # git bash with window   
+source \<venv_name\>/Script/activate # git bash with window   
 
 Scripts\activate.bat # cmd with window   
 
@@ -27,7 +27,7 @@ deactivate
 ## pipenv(not makedir it self)
 pip install pipenv   
 
-python -m pipenv --python <version>   
+python -m pipenv --python \<version\>   
 
 python -m pyenv versions # 여기에 버전들 깔림   
 
