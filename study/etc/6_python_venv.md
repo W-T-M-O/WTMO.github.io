@@ -29,7 +29,7 @@ exit
 
 * pipenv --venv  
 * pipenv --py  
-* pipenv run python # 가상환경으로 파이썬 실행하기
+* pipenv run python # 가상환경으로 파이썬 실행하기  
 
 ### jupyter setting
 
@@ -44,4 +44,4 @@ $ _ {23.09.15}$<br/><br/>
 
 
 
-{% include tag.html tag="python" %}  {% include tag.html tag="" %}
+{% include tag.html tag="python" %}
