@@ -31,7 +31,7 @@ cd ~
 ```
 mkdir <dir_name>
 ```
-* <dir_name> 폴더 만들기
+* \<dir_name\> 폴더 만들기
 
 <br/>
 
@@ -39,7 +39,7 @@ mkdir <dir_name>
 ```
 touch <file_name>
 ```
-* <file_name> 파일 만들기
+* \<file_name\> 파일 만들기
 
 <br/>
 
@@ -47,7 +47,7 @@ touch <file_name>
 ```
 cat <file_name>
 ```
-* <file_name> 파일 내용보기
+* \<file_name\> 파일 내용보기
 
 <br/>
 
@@ -56,8 +56,8 @@ cat <file_name>
 mv <file_name> <to_dir>
 mv <file_name> <to_dir>/<file_name_change>
 ```
-* <file_name>을 <to_dir>로 이동
-* <file_name>을 <file_name_change>로 이름바꿔서 <to_dir>로 이동
+* \<file_name\>을 \<to_dir\>로 이동
+* \<file_name\>을 \<file_name_change\>로 이름바꿔서 \<to_dir\>로 이동
 
 <br/>
 
@@ -66,8 +66,8 @@ mv <file_name> <to_dir>/<file_name_change>
 cp <file_name> <to_dir>
 cp <file_name> <to_dir>/<file_name_copy>
 ```
-* <file_name>을 <to_dir>로 복사
-* <file_name>을 <file_name_change>로 이름바꿔서 <to_dir>로 복사
+* \<file_name\>을 \<to_dir\>로 복사
+* \<file_name\>을 \<file_name_change\>로 이름바꿔서 \<to_dir\>로 복사
 
 <br/>
 
@@ -75,7 +75,7 @@ cp <file_name> <to_dir>/<file_name_copy>
 ```
 rm <file_name>
 ```
-* <file_name>을 삭제
+* \<file_name\>을 삭제
 
 <br/>
 
