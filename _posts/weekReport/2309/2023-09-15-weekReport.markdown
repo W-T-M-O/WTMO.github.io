@@ -25,6 +25,12 @@ summary: |-
 > [자료구조](/study/etc/4_자료구조)  
 > * 정규표현식 사용법추가  
 
+### 5.shell
+> [shell](/study/etc/5_shell)  
+
+### 6.python_venv
+> [python_venv](/study/etc/6_python_venv)  
+
 ## 코딩 테스트
 > [leetcode-shortest-path-in-binary-matrix](https://leetcode.com/problems/shortest-path-in-binary-matrix/)  
 > [leetcode-two-sum](https://leetcode.com/problems/two-sum/)  
