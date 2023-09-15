@@ -9,10 +9,10 @@
       link: /study/etc/3_socket
     - name: 4.자료구조
       link: /study/etc/4_자료구조
-    # - name: 5.
-    #   link: /study/etc/5_
-    # - name: 6.
-    #   link: /study/etc/6_
+    - name: 5.shell
+      link: /study/etc/5_shell
+    - name: 6.python_venv
+      link: /study/etc/6_python_venv
     # - name: 7.
     #   link: /study/etc/7_
     # - name: 8.
