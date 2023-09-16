@@ -5,6 +5,8 @@
       link: /project_practice/crawling/1_라이브러리 설명
     - name: python
       link: /project_practice/python/1_blog
+    - name: EDA
+      link: /project_practice/EDA/1_AI_research
     # - label: Getting Started
     #   subsubfolderitems:
     #     - name: Sidebar
