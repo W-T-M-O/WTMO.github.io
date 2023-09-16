@@ -1,0 +1,25 @@
+- label: EDA
+  link: /project_practice/
+  items:
+    - name: 1.AI_research
+      link: /project_practice/EDA/1_AI_research
+    # - name: 2.
+    #   link: /project_practice/EDA/2_
+    # - name: 3.
+    #   link: /project/EDA/3_
+    # - name: 4.
+    #   link: /project/EDA/4_
+    # - name: 5.
+    #   link: /project/EDA/5_
+    # - name: 6.
+    #   link: /project/EDA/6_
+    # - name: 7.
+    #   link: /project/EDA/7_
+    # - name: 8.
+    #   link: /project/EDA/8_
+    # - label: Getting Started
+    #   subsubfolderitems:
+    #     - name: Sidebar
+    #       link: /study/5/1/
+    #     - name: Sidebar
+    #       link: /study/5/2/
