@@ -29,19 +29,19 @@ summary: |-
 ## AI_trend_proj
 
 ### 1.EDA
-> [EDA](https://github.com/gitwtmo/AI_trend/blob/main/3_EDA1.ipynb)  
+> [EDA](https://github.com/gitwtmo/AI_trend/blob/main/full/3_EDA1.ipynb)  
 
 ### 2.EDA
-> [EDA](https://github.com/gitwtmo/AI_trend/blob/main/3_EDA2.ipynb)  
+> [EDA](https://github.com/gitwtmo/AI_trend/blob/main/full/3_EDA2.ipynb)  
 
 ### 3.EDA
-> [EDA](https://github.com/gitwtmo/AI_trend/blob/main/3_EDA3.ipynb)  
+> [EDA](https://github.com/gitwtmo/AI_trend/blob/main/full/3_EDA3.ipynb)  
 
 ### 4.EDA
-> [EDA](https://github.com/gitwtmo/AI_trend/blob/main/3_EDA4.ipynb)  
+> [EDA](https://github.com/gitwtmo/AI_trend/blob/main/full/3_EDA4.ipynb)  
 
 ### 5.EDA
-> [EDA](https://github.com/gitwtmo/AI_trend/blob/main/3_EDA5.ipynb)  
+> [EDA](https://github.com/gitwtmo/AI_trend/blob/main/full/3_EDA5.ipynb)  
 
 ### 6.PPT
 > [PPT](https://github.com/gitwtmo/AI_trend/blob/main/3_ppt.pptx)  
