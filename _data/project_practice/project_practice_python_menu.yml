@@ -1,10 +1,10 @@
-- label: 파이썬
+- label: python
   link: /project_practice/
   items:
     - name: 1.blog
       link: /project_practice/python/1_blog
-    - name: 2.
-      link: /project_practice/python/2_
+    # - name: 2.
+    #   link: /project_practice/python/2_
     # - name: 3.
     #   link: /project/python/3_
     # - name: 4.
