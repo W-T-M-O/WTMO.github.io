@@ -7,6 +7,8 @@
       link: /project_practice/python/1_blog
     - name: EDA
       link: /project_practice/EDA/1_AI_research
+    - name: kaggle
+      link: /project_practice/kaggle/1_essay_quality
     # - label: Getting Started
     #   subsubfolderitems:
     #     - name: Sidebar
