@@ -1,5 +1,5 @@
 ---
-layout: cv
+layout: recipe
 title: CV
 # menubarcount: 1
 # menubar: study_menu
