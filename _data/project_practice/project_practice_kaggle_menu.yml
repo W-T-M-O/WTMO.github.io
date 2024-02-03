@@ -1,0 +1,25 @@
+- label: kaggle
+  link: /project_practice/
+  items:
+    - name: 1.essay_quality
+      link: /project_practice/kaggle/1_essay_quality
+    # - name: 2.
+    #   link: /project_practice/python/2_
+    # - name: 3.
+    #   link: /project/python/3_
+    # - name: 4.
+    #   link: /project/python/4_
+    # - name: 5.
+    #   link: /project/python/5_
+    # - name: 6.
+    #   link: /project/python/6_
+    # - name: 7.
+    #   link: /project/python/7_
+    # - name: 8.
+    #   link: /project/python/8_
+    # - label: Getting Started
+    #   subsubfolderitems:
+    #     - name: Sidebar
+    #       link: /study/5/1/
+    #     - name: Sidebar
+    #       link: /study/5/2/
