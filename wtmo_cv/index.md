@@ -8,7 +8,7 @@ hero_darken: true
 ---
 
 <div style="display: flex; margin-bottom:10px; height: 210px;">
-    <img src="/path/wtmo/profile.png" style="vertical-align:middle; width: 170px; height: 210px;">
+    <img src="/path/wtmo/profile.PNG" style="vertical-align:middle; width: 170px; height: 210px;">
     <span style="margin-left:20px; margin-top:0px; height: 160px;">
         <h1 style="font-weight: bold; display: flex;  font-size: 30px; margin-bottom: 0px;">Young Jin Go</h1>
         <h1 style="display: flex; font-size: 20px; margin-bottom: 10px;">Developer</h1>
