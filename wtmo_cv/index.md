@@ -113,6 +113,7 @@ AI를 공부하여 더 다양한 것을 경험하여 개발자로써 폭넓게 �
         <img src="https://img.shields.io/badge/amazons3-569A31?style=flat&logo=amazons3&logoColor=white"/>
         <img src="https://img.shields.io/badge/apache-D22128?style=flat&logo=apache&logoColor=white"/>
         <img src="https://img.shields.io/badge/django-092E20?style=flat&logo=django&logoColor=white"/>
+        <img src="https://img.shields.io/badge/fastapi-005571?style=flat&logo=fastapi&logoColor=white"/>
     </div>
     <div class="text_2">
         AI
@@ -218,14 +219,14 @@ AI를 공부하여 더 다양한 것을 경험하여 개발자로써 폭넓게 �
 
 
 <div style="display: flex; margin-bottom:10px;">
-    <span class="text_2" style="margin-top:0px; flex: 10; font-weight: 500">2024.02.14 ~ 2024.03.31</span>
+    <span class="text_2" style="margin-top:0px; flex: 10; font-weight: 500">2024.02.14 ~ 2024.05.15</span>
     <div style="margin-left:10px; border-left : medium solid #a0a0a0; flex: 1"></div>
     <span style="margin-left:20px; flex: 50">
         <span style="display: flex; display: flex;" class="text_2">사용자 친화적인 챗봇 만들기 프로젝트</span>
         <span style="margin-bottom: 10px; display: flex;">
             <ul>
                 <li class="text_3">최신 LLM 논문 분석</li>
-                <li class="text_3">FastAPI, MongoDB를 활용한 서버 구축</li>
+                <li class="text_3">FastAPI, MongoDB를 활용한 서버로 구성된 slack bot 제작</li>
                 <li class="text_3">LangChain을 활용한 성능 개선법 검토중</li>
             </ul>
         </span>
@@ -287,6 +288,21 @@ AI를 공부하여 더 다양한 것을 경험하여 개발자로써 폭넓게 �
 <span style="display: flex; margin-bottom: 0px;" class="text_1">Problem Experience</span>
 
 
+<div style="display: flex; margin-bottom:10px;">
+    <span class="text_2" style="margin-top:0px; flex: 10; font-weight: 500"></span>
+    <div style="margin-left:10px; border-left : medium solid #a0a0a0; flex: 1"></div>
+    <span style="margin-left:20px; flex: 50">
+        <span style="display: flex; display: flex;" class="text_2">slack bot 응답시간 초과 에러</span>
+        <span style="margin-bottom: 10px; display: flex;">
+            <ul>
+                <li class="text_3">문제 : LLM을 도입하면 응답 대기시간이 5초 이상, Slack bot의 응답 대기시간이 3초 미만에서 오류가 없음</li>
+                <li class="text_3">해결 : python의 multi-thread기능을 활용하여 1초내에 응답</li>
+                <li class="text_3">평가 : LLM의 응답은 당연히 시간이 더 걸리지만 시스템적 오류를 없애는데 성공함</li>
+                <li class="text_3">비고 : LLM에서 답변의 생성시간이 오래 걸리기 때문에 해당 작업을 따로 작업을 시키면 응답에 문제가 없음</li>
+            </ul>
+        </span>
+    </span>
+</div>
 <div style="display: flex; margin-bottom:10px;">
     <span class="text_2" style="margin-top:0px; flex: 10; font-weight: 500"></span>
     <div style="margin-left:10px; border-left : medium solid #a0a0a0; flex: 1"></div>
